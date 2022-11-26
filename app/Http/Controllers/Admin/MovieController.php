@@ -70,8 +70,8 @@ class MovieController extends Controller
         $movie->description = $request["description"];
         $movie->save();
 
-        $video->storeAs("assets/videos", "$id" . "-" . "$movie->id.mp4", "public");
-        $thumbnail->storeAs("assets/thumbnails", "$id" . "-" . "$movie->id.png", "public");
+        $video->storeAs("assets/videos", "$id" . "-" . "$movie->id.mp4", "movies");
+        $thumbnail->storeAs("assets/thumbnails", "$id" . "-" . "$movie->id.png", "movies");
         return redirect(RouteServiceProvider::HOME);
     }
 }
