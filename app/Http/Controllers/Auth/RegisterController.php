@@ -27,7 +27,7 @@ class RegisterController extends Controller
         ]);
 
         event(new Registered($user));
-        Auth::guard()->login($user, $data["remember"]);
+        Auth::guard()->login($user, $data["remember"] == "on");
 
         return $request->wantsJson()
             ? new JsonResponse([], 201)
