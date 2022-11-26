@@ -42,3 +42,11 @@ Compile frontend files: Run `npm run dev` in the root directory
 ## Conclusion
 
 Now visit the site and you should be good to go!
+
+## Common error messages
+
+`Unable to locate file in Vite manifest: resources/scss/app.scss.`: This means you stopped running `npm run dev`. Run this command in the root directory again and keep it running while using the website.
+
+
+`SQLSTATE[HY000] [2002] Connection refused`: This is an issue with your database. Reverify it is running and that the data entered into `.env`
+ are correct!
